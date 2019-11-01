@@ -70,9 +70,9 @@ export class ApiService {
 
       default:
         // Prod
-        this.apiPath = 'https://eagle-test.pathfinder.gov.bc.ca/api/public';
-        this.adminUrl = 'https://test.projects.eao.gov.bc.ca/admin/';
-        this.env = 'test';
+        this.apiPath = 'https://cap-minio-eagle-dev-azure-oabrei-dev.pathfinder.gov.bc.ca';
+        this.adminUrl = 'https://cap-minio-eagle-dev-azure-oabrei-dev.pathfinder.gov.bc.ca/admin/';
+        this.env = 'dev';
     };
   }
 
