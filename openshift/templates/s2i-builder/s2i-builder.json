@@ -36,11 +36,11 @@
           "sourceStrategy": {
             "from": {
                 "kind": "ImageStreamTag",
-                "name": "angular-builder:latest"
+                "name": "${ANGULAR_BUILDER_IMAGE}:latest"
             },
             "runtimeImage": {
               "kind": "ImageStreamTag",
-              "name": "nginx-runtime:latest"
+              "name": "${NGINX_RUNTIME_IMAGE}:latest"
             },
             "runtimeArtifacts": [{
               "sourcePath": "/tmp/src",
@@ -70,7 +70,21 @@
       "displayName": "Name",
       "description": "The name assigned to all of the frontend objects defined in this template.",
       "required": true,
-      "value": "myappname"
+      "value": "cap-eagle-public"
+    },
+    {
+      "name": "ANGULAR_BUILDER_IMAGE",
+      "displayName": "Angular Builder Image",
+      "description": "The image that we compiled our code in.",
+      "required": true,
+      "value": "cap-eagle-public-builder"
+    },
+    {
+      "name": "NGINX_RUNTIME_IMAGE",
+      "displayName": "NGINX Runtime Image",
+      "description": "The NGINX image with our settings applied to.",
+      "required": true,
+      "value": "cap-eagle-public-nginx-runtime"
     }
   ]
 }
