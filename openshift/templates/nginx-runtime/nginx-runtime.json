@@ -60,9 +60,9 @@
     {
       "name": "GIT_REPO_URL",
       "displayName": "Git Repo URL",
-      "description": "The URL to your GIT repo, don't use the this default unless your just experimenting.",
+      "description": "The URL to common angular scaffold project.",
       "required": true,
-      "value": "https://github.com/bcgov/cap-eagle-public"
+      "value": "https://github.com/bcgov/angular-scaffold"
     }
   ]
 }
