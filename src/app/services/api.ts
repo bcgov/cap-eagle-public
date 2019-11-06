@@ -43,34 +43,31 @@ export class ApiService {
         this.env = 'local';
         break;
 
-      case 'eagle-dev.pathfinder.gov.bc.ca':
-        // prod
-        this.apiPath = 'https://eagle-dev.pathfinder.gov.bc.ca/api/public';
-        this.adminUrl = 'https://eagle-dev.pathfinder.gov.bc.ca/admin/';
+      case 'cap-eagle-dev.pathfinder.gov.bc.ca':
+        // dev
+        this.apiPath = 'https://cap-eagle-dev.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-eagle-dev.pathfinder.gov.bc.ca/admin/';
         this.env = 'dev';
         break;
 
-      case 'www.test.projects.eao.gov.bc.ca':
-      case 'eagle-test.pathfinder.gov.bc.ca':
-      case 'test.projects.eao.gov.bc.ca':
+      case 'cap-eagle-test.pathfinder.gov.bc.ca':
         // Test
-        this.apiPath = 'https://eagle-test.pathfinder.gov.bc.ca/api/public';
-        this.adminUrl = 'https://test.projects.eao.gov.bc.ca/admin/';
+        this.apiPath = 'https://cap-eagle-test.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-eagle-test.pathfinder.gov.bc.ca/admin/';
         this.env = 'test';
         break;
 
-      case 'www.projects.eao.gov.bc.ca':
-      case 'projects.eao.gov.bc.ca':
+      case 'cap-eagle-prod.pathfinder.gov.bc.ca':
         // prod
-        this.apiPath = 'https://eagle-prod.pathfinder.gov.bc.ca/api/public';
-        this.adminUrl = 'https://projects.eao.gov.bc.ca/admin/';
+        this.apiPath = 'https://cap-eagle-prod.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-eagle-prod.pathfinder.gov.bc.ca/admin/';
         this.env = 'prod';
         break;
 
       default:
-        // Prod
-        this.apiPath = 'https://cap-minio-eagle-dev-azure-oabrei-dev.pathfinder.gov.bc.ca';
-        this.adminUrl = 'https://cap-minio-eagle-dev-azure-oabrei-dev.pathfinder.gov.bc.ca/admin/';
+        // dev
+        this.apiPath = 'https://cap-eagle-dev.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-eagle-dev.pathfinder.gov.bc.ca/admin/';
         this.env = 'dev';
     };
   }
