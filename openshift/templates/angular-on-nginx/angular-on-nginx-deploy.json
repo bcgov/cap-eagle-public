@@ -6,7 +6,7 @@
       "description": "Deployment template for a angular on nginx",
       "tags": "angular,nginx"
     },
-    "name": "cap-eagle-public-angular-on-nginx"
+    "name": "cap-eagle-public"
   },
   "objects": [
     {
@@ -193,7 +193,7 @@
       "displayName": "Name",
       "name": "NAME",
       "required": true,
-      "value": "cap-eagle-public-angular-on-nginx"
+      "value": "cap-eagle-public"
     },
     {
       "description": "The namespace where to get the above image name",

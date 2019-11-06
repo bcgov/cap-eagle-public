@@ -62,7 +62,7 @@
       "displayName": "Git Repo URL",
       "description": "The URL to common angular scaffold project.",
       "required": true,
-      "value": "https://github.com/bcgov/cap-eagle-public"
+      "value": "https://github.com/bcgov/angular-scaffold"
     }
   ]
 }
