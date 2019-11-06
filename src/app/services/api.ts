@@ -36,39 +36,39 @@ export class ApiService {
     this.isMS = window.navigator.msSaveOrOpenBlob ? true : false;
     const { hostname } = window.location;
     switch (hostname) {
-  case 'localhost':
-    // Local
-    this.apiPath = 'http://localhost:3000/api/public';
-    this.adminUrl = 'http://localhost:4200';
-    this.env = 'local';
-    break;
+      case 'localhost':
+        // Local
+        this.apiPath = 'http://localhost:3000/api/public';
+        this.adminUrl = 'http://localhost:4200';
+        this.env = 'local';
+        break;
 
-  case 'cap-eagle-dev.pathfinder.gov.bc.ca':
-    // prod
-    this.apiPath = 'https://cap-eagle-dev.pathfinder.gov.bc.ca/api/public';
-    this.adminUrl = 'https://cap-eagle-dev.pathfinder.gov.bc.ca/admin/';
-    this.env = 'dev';
-    break;
+      case 'cap-eagle-dev.pathfinder.gov.bc.ca':
+        // dev
+        this.apiPath = 'https://cap-eagle-dev.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-eagle-dev.pathfinder.gov.bc.ca/admin/';
+        this.env = 'dev';
+        break;
 
-  case 'cap-eagle-test.pathfinder.gov.bc.ca':
-    // Test
-    this.apiPath = 'https://cap-eagle-test.pathfinder.gov.bc.ca/api/public';
-    this.adminUrl = 'https://cap-eagle-test.pathfinder.gov.bc.ca/admin/';
-    this.env = 'test';
-    break;
+      case 'cap-eagle-test.pathfinder.gov.bc.ca':
+        // Test
+        this.apiPath = 'https://cap-eagle-test.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-eagle-test.pathfinder.gov.bc.ca/admin/';
+        this.env = 'test';
+        break;
 
-  case 'cap-eagle-prod.pathfinder.gov.bc.ca':
-    // prod
-    this.apiPath = 'https://cap-eagle-prod.pathfinder.gov.bc.ca/api/public';
-    this.adminUrl = 'https://cap-eagle-prod.pathfinder.gov.bc.ca/admin/';
-    this.env = 'prod';
-    break;
+      case 'cap-eagle-prod.pathfinder.gov.bc.ca':
+        // prod
+        this.apiPath = 'https://cap-eagle-prod.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-eagle-prod.pathfinder.gov.bc.ca/admin/';
+        this.env = 'prod';
+        break;
 
-  default:
-    // Prod
-    this.apiPath = 'https://cap-eagle-test.pathfinder.gov.bc.ca/api/public';
-    this.adminUrl = 'https://cap-eagle-test.pathfinder.gov.bc.ca/admin/';
-    this.env = 'test';
+      default:
+        // dev
+        this.apiPath = 'https://cap-eagle-dev.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-eagle-dev.pathfinder.gov.bc.ca/admin/';
+        this.env = 'dev';
     };
   }
 
