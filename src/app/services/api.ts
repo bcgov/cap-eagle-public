@@ -87,8 +87,8 @@ export class ApiService {
 
       default:
         // dev
-        this.apiPath = 'https://cap-eagle-dev.pathfinder.gov.bc.ca/api/public';
-        this.adminUrl = 'https://cap-eagle-dev.pathfinder.gov.bc.ca/admin/';
+        this.apiPath = 'https://cap-minio-eagle-dev-azure-oabrei-dev.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-minio-eagle-dev-azure-oabrei-dev.pathfinder.gov.bc.ca/admin/';
         this.env = 'dev';
     };
   }
