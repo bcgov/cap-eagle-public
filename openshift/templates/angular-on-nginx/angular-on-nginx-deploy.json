@@ -196,7 +196,7 @@
       "displayName": "Name",
       "description": "The name assigned to all of the openshift objects defined in this template. It is also the name of runtime image you want.",
       "required": true,
-      "value": "cap-eagle-public"
+      "value": "eagle-public"
     },
     {
       "name": "GROUP_NAME",
