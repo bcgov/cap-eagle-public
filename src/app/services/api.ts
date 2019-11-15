@@ -25,7 +25,7 @@ export class ApiService {
   public isMS: boolean; // IE, Edge, etc
   public apiPath: string;
   public adminUrl: string;
-  public env: 'local' | 'dev' | 'test' | 'prod' | 'demo';
+  public env: 'local' | 'dev' | 'test' | 'prod';
 
   constructor(
     private http: HttpClient,
@@ -50,6 +50,13 @@ export class ApiService {
         this.env = 'dev';
         break;
 
+      case 'cap-eagle-oabrei-dev.pathfinder.gov.bc.ca':
+        // dev
+        this.apiPath = 'https://cap-eagle-oabrei-dev.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-eagle-oabrei-dev.pathfinder.gov.bc.ca/admin/';
+        this.env = 'dev';
+        break;
+
       case 'cap-eagle-test.pathfinder.gov.bc.ca':
         // Test
         this.apiPath = 'https://cap-eagle-test.pathfinder.gov.bc.ca/api/public';
@@ -57,27 +64,31 @@ export class ApiService {
         this.env = 'test';
         break;
 
-      case 'cap-eagle-prod.pathfinder.gov.bc.ca':
-      case 'eagle-test-demo.pathfinder.gov.bc.ca/':
-        // Demo
-        this.apiPath = 'https://eagle-test-demo.pathfinder.gov.bc.ca/api/public';
-        this.adminUrl = 'https://eagle-test-demo.pathfinder.gov.bc.ca/admin/';
-        this.env = 'demo';
+      case 'cap-eagle-oabrei-test.pathfinder.gov.bc.ca':
+        // Test
+        this.apiPath = 'https://cap-eagle-oabrei-test.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-eagle-oabrei-test.pathfinder.gov.bc.ca/admin/';
+        this.env = 'test';
         break;
 
-      case 'www.projects.eao.gov.bc.ca':
-      case 'eagle-prod.pathfinder.gov.bc.ca':
-      case 'projects.eao.gov.bc.ca':
+      case 'cap-eagle-prod.pathfinder.gov.bc.ca':
         // prod
         this.apiPath = 'https://cap-eagle-prod.pathfinder.gov.bc.ca/api/public';
         this.adminUrl = 'https://cap-eagle-prod.pathfinder.gov.bc.ca/admin/';
         this.env = 'prod';
         break;
 
+      case 'cap-eagle-oabrei-prod.pathfinder.gov.bc.ca':
+        // prod
+        this.apiPath = 'https://cap-eagle-oabrei-prod.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-eagle-oabrei-prod.pathfinder.gov.bc.ca/admin/';
+        this.env = 'prod';
+        break;
+
       default:
-        // Prod
-        this.apiPath = 'https://cap-minio-eagle-dev-azure-oabrei-dev.pathfinder.gov.bc.ca';
-        this.adminUrl = 'https://cap-minio-eagle-dev-azure-oabrei-dev.pathfinder.gov.bc.ca/admin/';
+        // dev
+        this.apiPath = 'https://cap-eagle-dev.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-eagle-dev.pathfinder.gov.bc.ca/admin/';
         this.env = 'dev';
     };
   }
