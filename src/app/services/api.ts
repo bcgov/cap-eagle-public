@@ -50,10 +50,24 @@ export class ApiService {
         this.env = 'dev';
         break;
 
+      case 'cap-eagle-oabrei-dev.pathfinder.gov.bc.ca':
+        // dev
+        this.apiPath = 'https://cap-eagle-oabrei-dev.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-eagle-oabrei-dev.pathfinder.gov.bc.ca/admin/';
+        this.env = 'dev';
+        break;
+
       case 'cap-eagle-test.pathfinder.gov.bc.ca':
         // Test
         this.apiPath = 'https://cap-eagle-test.pathfinder.gov.bc.ca/api/public';
         this.adminUrl = 'https://cap-eagle-test.pathfinder.gov.bc.ca/admin/';
+        this.env = 'test';
+        break;
+
+      case 'cap-eagle-oabrei-test.pathfinder.gov.bc.ca':
+        // Test
+        this.apiPath = 'https://cap-eagle-oabrei-test.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-eagle-oabrei-test.pathfinder.gov.bc.ca/admin/';
         this.env = 'test';
         break;
 
@@ -64,10 +78,17 @@ export class ApiService {
         this.env = 'prod';
         break;
 
+      case 'cap-eagle-oabrei-prod.pathfinder.gov.bc.ca':
+        // prod
+        this.apiPath = 'https://cap-eagle-oabrei-prod.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-eagle-oabrei-prod.pathfinder.gov.bc.ca/admin/';
+        this.env = 'prod';
+        break;
+
       default:
         // dev
-        this.apiPath = 'https://cap-eagle-dev.pathfinder.gov.bc.ca/api/public';
-        this.adminUrl = 'https://cap-eagle-dev.pathfinder.gov.bc.ca/admin/';
+        this.apiPath = 'https://cap-minio-eagle-dev-azure-oabrei-dev.pathfinder.gov.bc.ca/api/public';
+        this.adminUrl = 'https://cap-minio-eagle-dev-azure-oabrei-dev.pathfinder.gov.bc.ca/admin/';
         this.env = 'dev';
     };
   }
